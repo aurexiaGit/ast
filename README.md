@@ -1,6 +1,6 @@
 # Aurexia Social Token Platform
 
-# Bonjour 
+## Welcome 
 
 ## API
 
