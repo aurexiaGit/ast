@@ -13,7 +13,21 @@ The Front End of this platform is being developed in [React.js](https://fr.react
 ### Development
 
 All development must be done in the dev branch.
-The Main branch is reserved for final output wented. It must be update when features are completly finished. Each feature will be development on a specific branch.
+The Main branch is reserved for final output wented. It must be update when features are completly finished. Each feature will be development on a specific branch with US' name given in Trello.
+
+Reminders :
+
+To create a branch :
+
+```command
+git branch US01
+```
+
+To go on that new branch :
+
+```command
+git checkout US01
+```
 
 ### Before push
 
@@ -21,7 +35,7 @@ Add all librairies used in Python into the requirements.txt file with the correc
 
 At each pip install command note the version to add into the requirements.txt file
 
-On main branch to update the website front you must run the folowing command before commit :
+On main branch to update the website front you must run the folowing command before commit in Front directory:
 
 ```command
 npm run deploy
