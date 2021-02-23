@@ -1,21 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import "./assets/css/bootstrap.min.css";
-import "./assets/css/icons.min.css";
-import "./assets/css/app.css";
-import Home from './Component/Home';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { runWithAdal } from 'react-adal';
+import { authContext } from './adalConfig';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App/>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const DO_NOT_LOGIN = false;
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+runWithAdal(authContext, () => {
+  require('./indexApp.js');
+},DO_NOT_LOGIN);
