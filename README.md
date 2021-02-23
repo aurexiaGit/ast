@@ -1,5 +1,7 @@
 # Aurexia Social Token Platform
 
+## Welcome 
+
 ## API
 
 The API is being developed in Python 3.7 using flask.

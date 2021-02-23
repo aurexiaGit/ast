@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Form editor"})
+
+        <!-- Summernote css -->
+        <link href="assets/libs/summernote/summernote-bs4.min.css" rel="stylesheet" type="text/css" />
+
+        @@include("partials/head-css.html")
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+
+                        @@include("partials/page-title.html", {"pagetitle": "Utility", "title": "Form editor"})
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Ckeditor Classic editor</h4>
+                                        <p class="card-title-desc">Example of Ckeditor Classic editor</p>
+                                        <div id="classic-editor"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Summernote</h4>
+                                        <p class="card-title-desc">Super simple wysiwyg editor on bootstrap</p>
+        
+                                        <div id="summernote-editor" class="summernote">Hello Summernote</div>
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Summernote Air-mode</h4>
+                                        <p class="card-title-desc">Summernote editor air-mode example.</p>
+        
+                                        <div id="summernote-airmode-editor" class="summernote">
+                                            <h5>This is an Air-mode editable area.</h5>
+                                            <ul>
+                                              <li>Select a text to reveal the toolbar.</li>
+                                              <li>Edit rich document on-the-fly, so elastic!</li>
+                                            </ul>
+                                            <p>End of air-mode area</p>
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                        
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+                
+                @@include("partials/footer.html")
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+
+        <!-- ckeditor -->
+        <script src="assets/libs/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+
+        <!-- Summernote js -->
+        <script src="assets/libs/summernote/summernote-bs4.min.js"></script>
+
+        <!-- init js -->
+        <script src="assets/js/pages/form-editor.init.js"></script>
+
+        <script src="assets/js/app.js"></script>
+
+        <script>
+        ClassicEditor
+        .create( document.querySelector( '#classic-editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+        </script>
+
+    </body>
+</html>
