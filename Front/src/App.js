@@ -1,5 +1,3 @@
-import './App.css';
-
 function App() {
   return (
     <div class="account-pages my-5 pt-sm-5">

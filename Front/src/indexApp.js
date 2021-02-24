@@ -9,7 +9,9 @@ import {
     useParams
   }from 'react-router-dom';
 
-import './index.css';
+import './assets/css/bootstrap.min.css';
+import './assets/css/icons.min.css';
+import './assets/css/app.css';
 
 import { withAdalLoginApi } from './adalConfig';
 
