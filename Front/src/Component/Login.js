@@ -1,8 +1,31 @@
+import { buildQueries } from '@testing-library/react';
 import React from 'react';
 import Header from './Header';
 
 class Login extends React.Component {
+    constructor(props){
+      super(props)
+      this.state={
+        email:"",
+        password:""
+      }
+    }
+
+    handleEmail=(event)=>{
+      this.setState({email:event.target.value})
+    }
+
+    handlePassword=(event)=>{
+      this.setState({password:event.target.value})
+    }
+
+    SubmitLogIn(){
+      alert(this.state)
+    }
+
+
     render() {
+
       return <div>
 
                   
@@ -38,7 +61,7 @@ class Login extends React.Component {
 
                                           <div class="form-group">
                                               <label for="username">Username</label>
-                                              <input type="text" class="form-control" id="username" placeholder="Enter username"/>
+                                              <input type="text" onChange={this.handleEmail} class="form-control" id="username" placeholder="Enter username"/>
                                           </div>
                   
                                           <div class="form-group">
@@ -46,7 +69,7 @@ class Login extends React.Component {
                                                   <a href="auth-recoverpw.html" class="text-muted">Forgot password?</a>
                                               </div>
                                               <label for="userpassword">Password</label>
-                                              <input type="password" class="form-control" id="userpassword" placeholder="Enter password"/>
+                                              <input type="password" onChange={this.handlePassword} class="form-control" id="userpassword" placeholder="Enter password"/>
                                           </div>
                   
                                           <div class="custom-control custom-checkbox">
@@ -55,7 +78,10 @@ class Login extends React.Component {
                                           </div>
                                           
                                           <div class="mt-3 text-right">
-                                              <button class="btn btn-primary w-sm waves-effect waves-light" type="submit">Log In</button>
+                                              <button   class="btn btn-primary w-sm waves-effect waves-light" type="submit">Log In</button>
+                                          </div>
+                                          <div>
+                                            <button onClick={this.SubmitLogIn}>Test </button>
                                           </div>
               
                                           
