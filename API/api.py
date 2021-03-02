@@ -22,12 +22,6 @@ mydb = mysql.connector.connect(
 )
 
 
-
-
-
-
-
-
 # Flask API
 app = Flask(__name__)
 
@@ -149,23 +143,8 @@ def createuser():
         else:
             response=Response("{'a':'negative'}", status=403, mimetype='application/json')
         
-
-        
-
-
-
-
-
-
-
     return(response)
   
-
-
-
-
-
-    
 
 
 if __name__ == '__main__':
