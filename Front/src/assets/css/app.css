@@ -56,6 +56,10 @@ body:not(.vertical-collpsed) .app-search {
   .logo .logo-sm {
     display: none; }
 
+img.logo {
+  max-width: 150px;
+}
+
 .logo-dark {
   display: block; }
 

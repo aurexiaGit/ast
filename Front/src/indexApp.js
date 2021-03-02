@@ -18,6 +18,7 @@ import './assets/css/app.css';
 import App from './App';
 import Home from './Components/Home';
 import LandingPage from './Components/LandingPage';
+import SignIn from './Components/SignIn';
 /*import Loading from './Components/Loading';
 import ErrorPage from './Components/ErrorPage';
 import {authContext} from './adalConfig';*/
@@ -30,6 +31,7 @@ ReactDOM.render(
             <Switch>
                 <Route path ="/ast"><App/></Route>
                 <Route path ="/home"><Home/></Route>
+                <Route path ="/signin"><SignIn/></Route>
                 <Route path ="/"><LandingPage/></Route>
             </Switch>
         </Router>
