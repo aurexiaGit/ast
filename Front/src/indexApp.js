@@ -4,7 +4,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-/*    Link,
+   /*Link,
     useRouteMatch,
     useParams*/
   }from 'react-router-dom';
@@ -17,8 +17,10 @@ import './assets/css/app.css';
 
 import App from './App';
 import Home from './Components/Home';
+import Login from './Component/Login';
+import Header from './Component/Header';
 import LandingPage from './Components/LandingPage';
-import SignIn from './Components/SignIn';
+import SignIn from './Components/LogIn';
 /*import Loading from './Components/Loading';
 import ErrorPage from './Components/ErrorPage';
 import {authContext} from './adalConfig';*/
@@ -26,14 +28,21 @@ import {authContext} from './adalConfig';*/
 //const MyProtectedPage = withAdalLoginApi(App, () => <Loading />, (error) => <ErrorPage error={error}/>);
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Router>
+
+  <React.StrictMode>
+    <Router>
+        <div>
+      
+  
             <Switch>
+                <Route path ="/header"> <Header/> </Route>
+                <Route path ="/login"> <Login/> </Route>
                 <Route path ="/ast"><App/></Route>
                 <Route path ="/home"><Home/></Route>
                 <Route path ="/signin"><SignIn/></Route>
                 <Route path ="/"><LandingPage/></Route>
             </Switch>
+        </div>
         </Router>
     </React.StrictMode>,
     document.getElementById('root')
