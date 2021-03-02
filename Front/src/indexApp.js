@@ -4,47 +4,35 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
+/*    Link,
     useRouteMatch,
-    useParams
+    useParams*/
   }from 'react-router-dom';
 
-import './index.css';
-import "./assets/css/bootstrap.min.css";
-import "./assets/css/icons.min.css";
-import "./assets/css/app.css";
+import './assets/css/bootstrap.css';
+import './assets/css/icons.min.css';
+import './assets/css/app.css';
 
-import { withAdalLoginApi } from './adalConfig';
+//import { withAdalLoginApi } from './adalConfig';
 
 import App from './App';
 import Home from './Components/Home';
-import Loading from './Components/Loading';
+import LandingPage from './Components/LandingPage';
+/*import Loading from './Components/Loading';
 import ErrorPage from './Components/ErrorPage';
-import {authContext} from './adalConfig';
+import {authContext} from './adalConfig';*/
 
 //const MyProtectedPage = withAdalLoginApi(App, () => <Loading />, (error) => <ErrorPage error={error}/>);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-        <div>
-            <ul>
-                <li>
-                    <Link to ="/ast">App</Link>
-                </li>
-                <li>
-                    <Link to ="/home">Landing Page</Link>
-                </li>
-                {/*<li>
-                    <button onClick={authContext.logOut}>Log Out</button>
-                </li>*/}
-            </ul>
+    <React.StrictMode>
+        <Router>
             <Switch>
                 <Route path ="/ast"><App/></Route>
                 <Route path ="/home"><Home/></Route>
+                <Route path ="/"><LandingPage/></Route>
             </Switch>
-        </div>
-    </Router>
-  </React.StrictMode>,
-  document.getElementById('root')
+        </Router>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
