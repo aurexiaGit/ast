@@ -32,9 +32,10 @@ ReactDOM.render(
                 <li>
                     <Link to ="/home">Landing Page</Link>
                 </li>
-                {/*<li>
-                    <button onClick={authContext.logOut}>Log Out</button>
-                </li>*/}
+
+                <li>
+                    <button onClick={authContext.logOut()} >Log Out</button>
+                </li>
             </ul>
             <Switch>
                 <Route path ="/ast"><App/></Route>
