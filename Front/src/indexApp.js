@@ -17,6 +17,8 @@ import './assets/css/app.css';
 
 import App from './App';
 import Home from './Components/Home';
+import Login from './Component/Login';
+import Header from './Component/Header';
 import LandingPage from './Components/LandingPage';
 import Loading from './Components/Loading';
 import ErrorPage from './Components/ErrorPage';
@@ -32,6 +34,8 @@ ReactDOM.render(
       
   
             <Switch>
+                <Route path ="/header"> <Header/> </Route>
+                <Route path ="/login"> <Login/> </Route>
                 <Route path ="/ast"><App/></Route>
                 <Route path ="/home"><Home/></Route>
                 <Route path ="/"><LandingPage/></Route>

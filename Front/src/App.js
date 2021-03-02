@@ -78,7 +78,7 @@ function App() {
                                                 </div>
 
                                                 <div className="mt-4 text-center">
-                                                    <p className="text-muted mb-0">Already have an account ? <a href="auth-login.html" className="font-weight-medium text-primary"> Login</a></p>
+                                                    <p className="text-muted mb-0">Already have an account ? <a href="/login" className="font-weight-medium text-primary"> Login</a></p>
                                                 </div>
                                             </form>
                                         </div>            
